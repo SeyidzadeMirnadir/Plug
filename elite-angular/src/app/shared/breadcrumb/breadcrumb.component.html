@@ -1,0 +1,22 @@
+<!-- ============================================================== -->
+<!-- Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+
+<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+        <h4 class="page-title">{{pageInfo?.title}}</h4>
+    </div>
+    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+        <a href="https://themeforest.net/item/elite-admin-responsive-dashboard-web-app-kit-/16750820" target="_blank" class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Buy Now</a>
+        <ol class="breadcrumb">
+            <ng-template ngFor let-url [ngForOf]="pageInfo?.urls" let-last="last">
+            <li *ngIf="!last" [routerLink]="url.url"><a href="#">{{url.title}}</a></li>
+            <li class="active" *ngIf="last">{{url.title}}</li>
+            </ng-template>
+        </ol>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- ============================================================== -->
+<!-- End Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
